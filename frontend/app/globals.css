@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Natural/Earthy palette */
+  --bg: 48 33% 98%;
+  --card: 48 33% 99%;
+  --text: 25 25% 12%;
+  --muted: 25 10% 40%;
+  --accent: 92 18% 32%; /* muted sage/olive */
+  --ring: 92 18% 32%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: hsl(var(--bg));
+  color: hsl(var(--text));
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
