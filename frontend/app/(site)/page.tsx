@@ -2,6 +2,8 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import { site } from "@/content/site";
 import { formatPhone } from "@/lib/utils";
+import GalleryPreview from "@/components/sections/GalleryPreview";
+
 
 export default function HomePage() {
   return (
@@ -43,13 +45,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-black/5 p-4">
-            <div className="aspect-[4/3] w-full rounded-2xl bg-black/10" />
-            <p className="mt-3 text-sm text-[hsl(var(--muted))]">
-              Gallery reminder drop images into <code className="rounded bg-black/5 px-1">public/images/gallery</code>
-            </p>
-          </div>
-        </div>
+          <GalleryPreview />
+	  </div>
       </Section>
 
       <Section className="mt-16">
