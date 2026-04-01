@@ -23,6 +23,15 @@ export default function Footer() {
             <div className="text-sm font-semibold">Contact</div>
             <p className="mt-2 text-sm text-[hsl(var(--muted))]">{formatPhone(site.phone)}</p>
             <p className="text-sm text-[hsl(var(--muted))]">{site.addressLine1}</p>
+	    {site.social.facebook && (
+ <a
+  href={site.social.facebook}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-2 inline-block text-sm font-medium text-[hsl(var(--accent))] hover:underline"
+>
+  Visit our Facebook →
+</a>)}
           </div>
         </div>
 

@@ -15,20 +15,25 @@ export default function HomePage() {
               Soothing • Clean • Detailed
             </p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Later
-            </h1>
-            <p className="mt-4 text-base text-[hsl(var(--muted))]">
-              below later
-              {` `}{site.bookingNote}
-            </p>
+  Beautiful nails, done with care.
+</h1>
 
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Button href="/contact">Book / Contact</Button>
-              <Button href={`tel:${site.phone}`} variant="ghost">
-                Call {formatPhone(site.phone)}
-              </Button>
-            </div>
+<p className="mt-4 text-base text-[hsl(var(--muted))]">
+  Relax, refresh, and leave feeling confident. We specialize in clean, detailed work
+  tailored to your style. {site.bookingNote}
+</p>
 
+<div className="mt-6 flex flex-wrap gap-3">
+  <Button href="/contact">Book / Contact</Button>
+
+  <Button href={`tel:${site.phone}`} variant="ghost">
+    Call {formatPhone(site.phone)}
+  </Button>
+
+  <Button href="sms:2563209600" variant="ghost">
+    Text Us
+  </Button>
+</div>
             <div className="mt-6 grid grid-cols-3 gap-3 text-sm">
               <div className="rounded-2xl bg-[hsl(var(--card))] p-4 shadow-sm">
                 <div className="font-semibold">Clean</div>
