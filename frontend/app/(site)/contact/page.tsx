@@ -44,7 +44,20 @@ export default function ContactPage() {
   </Button>
 </div>
 </div>
-        {/* CONTACT FORM (FUTURE USE) */}
+<div>
+  <h2 className="text-2xl font-semibold tracking-tight">
+    Book Your Appointment
+  </h2>
+
+  <div className="mt-6 w-full h-[700px]">
+    <iframe
+      src="https://calendly.com/judahnails"
+      className="w-full h-full rounded-lg border border-[var(--gold)]"
+    />
+  </div>
+</div>
+
+        {/* CONTACT FORM (FUTURE USE) */}{/*
         <div className="rounded-3xl bg-[hsl(var(--card))] p-6 shadow-sm">
           <h2 className="text-lg font-semibold">Request Booking</h2>
 
@@ -72,9 +85,9 @@ export default function ContactPage() {
               Send Request (Coming Soon)
             </Button>
           </div>
-        </div>
-
-      </div>
+        </div> 
+*/}
+      </div> 
     </Section>
   );
 }
