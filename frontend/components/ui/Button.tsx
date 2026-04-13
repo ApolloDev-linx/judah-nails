@@ -5,7 +5,7 @@ type Props = {
   href?: string;
   onClick?: () => void;
   children: React.ReactNode;
-  variant?: "primary" | "ghost";
+  variant?: "primary" | "ghost" | "outline";
   className?: string;
 };
 
@@ -18,10 +18,15 @@ export default function Button({
 }: Props) {
   const base =
     "inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition will-change-transform";
-  const styles =
-    variant === "primary"
-      ? "bg-[hsl(var(--accent))] text-white shadow-sm hover:opacity-95 hover:-translate-y-[1px] active:translate-y-0"
-      : "bg-transparent text-[hsl(var(--text))] hover:bg-black/5";
+
+  const styles = {
+    primary:
+      "bg-[hsl(var(--accent))] text-white shadow-sm hover:opacity-95 hover:-translate-y-[1px] active:translate-y-0",
+    ghost:
+      "bg-transparent text-[hsl(var(--text))] hover:bg-black/5",
+    outline:
+      "border border-[hsl(var(--accent))] text-[hsl(var(--accent))] bg-transparent hover:bg-[hsl(var(--accent))]/5 hover:-translate-y-[1px] active:translate-y-0",
+  }[variant];
 
   if (href) {
     return (
@@ -37,4 +42,3 @@ export default function Button({
     </button>
   );
 }
-
