@@ -113,38 +113,38 @@ export default function Navbar() {
             Book / Contact
           </Button>
 
-          {/* ── animated hamburger ── */}
+          {/* ── menu toggle ── */}
           <button
             className="relative flex h-9 w-9 items-center justify-center rounded-xl hover:bg-black/5 md:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
-            <div className="flex w-[18px] flex-col items-center gap-[5px]">
-              <span
-                className="block h-[1.5px] w-full rounded-full bg-[hsl(var(--text))] transition-all duration-300 origin-center"
-                style={{
-                  transform: open
-                    ? "translateY(3.25px) rotate(45deg)"
-                    : "translateY(0) rotate(0)",
-                }}
-              />
-              <span
-                className="block h-[1.5px] w-full rounded-full bg-[hsl(var(--text))] transition-all duration-300"
-                style={{
-                  opacity: open ? 0 : 1,
-                  transform: open ? "scaleX(0)" : "scaleX(1)",
-                }}
-              />
-              <span
-                className="block h-[1.5px] w-full rounded-full bg-[hsl(var(--text))] transition-all duration-300 origin-center"
-                style={{
-                  transform: open
-                    ? "translateY(-3.25px) rotate(-45deg)"
-                    : "translateY(0) rotate(0)",
-                }}
-              />
-            </div>
+            {/* hamburger */}
+            <svg
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+              className="absolute h-5 w-5 transition-all duration-300"
+              style={{
+                opacity: open ? 0 : 1,
+                transform: open ? "rotate(45deg) scale(0.8)" : "rotate(0) scale(1)",
+              }}
+            >
+              <line x1="4" y1="7" x2="20" y2="7" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="17" x2="20" y2="17" />
+            </svg>
+            {/* close X */}
+            <svg
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+              className="absolute h-5 w-5 transition-all duration-300"
+              style={{
+                opacity: open ? 1 : 0,
+                transform: open ? "rotate(0) scale(1)" : "rotate(-45deg) scale(0.8)",
+              }}
+            >
+              <line x1="6" y1="6" x2="18" y2="18" />
+              <line x1="18" y1="6" x2="6" y2="18" />
+            </svg>
           </button>
 
           {/* Call button */}
